@@ -9,10 +9,16 @@
 void ADC_Pin_Config(int Port){
 	switch(Port){
 	case 0:
-		GPIOA->MODER &= 0xFFFFFF00;
+		GPIOA->MODER &= 0xFFFFFFF0;
 		GPIOA->MODER |= 0x00000003;
 		GPIOA->ASCR &= 0xFFFFFFFE;
 		GPIOA->ASCR |= 0x00000001;
+		break;
+	case 1:
+		GPIOA->MODER &= 0xFFFFFFF0;
+		GPIOA->MODER |= 0x0000000C;
+		GPIOA->ASCR &= 0xFFFFFFFD;
+		GPIOA->ASCR |= 0x00000002;
 		break;
 	default:
 		break;
