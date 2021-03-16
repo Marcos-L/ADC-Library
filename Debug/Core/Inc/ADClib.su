@@ -1,0 +1,2 @@
+ADClib.c:9:6:ADC_Pin_Config	16	static
+ADClib.c:21:5:AnalogRead	16	static
